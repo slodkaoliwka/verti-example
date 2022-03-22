@@ -23,3 +23,8 @@ node_modules/
 ### Other ###
 .test/
 .solution
+*.css
+.gitignore
+package-lock.json
+main.css.map
+main.css

@@ -11,7 +11,7 @@ body{
 .container{
   max-width: 960px;
   margin: 0 auto;
-  padding: 1em;
+  //padding: 1em;
 }
 
 .logo {
@@ -34,23 +34,57 @@ header{
     display: inline-block;
     background-color: $main-logo-color;
   }
-
-  .menu{
+  #hamburger{
     display: none;
-    @include tablet{
-      display: flex;
-    }
-    .menu_item{
-      padding: 0.5em 1em;
-      font-weight: bold;
-      border-radius: 0.25em;
-    }
-    .menu_item_active{
-      background-color: $main-text-color;
-      color: $main-background-color;
+    &:checked {
+      ~ .menu {
+        display: flex;
+      }
     }
   }
-}
+
+  .hamburger__toggle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1em;
+    &:hover{
+
+    }
+
+    span {
+      width: 20px;
+      height: 2px;
+      display: block;
+      margin-bottom: 3px;
+      background-color: $main-logo-color;
+      transition: 0.3s all ease-in-out;
+      @include tablet {
+        display: none;
+      }
+    }
+
+    .menu {
+      display: none;
+      @include tablet {
+        display: flex;
+      }
+
+      .menu_item {
+        padding: 0.5em 1em;
+        font-weight: bold;
+        border-radius: 0.25em;
+      }
+
+      .menu_item_active {
+        background-color: $main-text-color;
+        color: $main-background-color;
+      }
+    }
+
+  }}
+
+
 
 .welcome{
   background-color: white;
@@ -118,26 +152,89 @@ header{
   }
 
 .portfolio {
+  display: flex;
+  flex-direction: column;
+  @include tablet{
+    flex-direction: row;
+  }
+
     .portfolio__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
       background-color: white;
       overflow: hidden;
-      border-radius: 0.25px;
+      border-radius: 0.5em;
+      margin: 1em 1em;
+
 
     .portfolio__item__thumbnail {
       img{
         display: block;
         width: 100%;
         height: 100%;
-      }
+        }
     }
 
     .portfolio__item__header {
-      padding: 2em;
       display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1em;
+      h3{
+        font-family: "Open Sans", sans-serif;
+        font-weight: 800;
+      }
+      h4{
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+      }
     }
 
     .portfolio__item__description {
-      // opis
+      text-align: left;
+      padding: 1em;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 300;
+    }
+  }
+  .third{
+    margin: 1em 1em 5em 1em;
+  }
+}
+
+.content{
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+
+  .content_text{
+    padding: 1em;
+
+
+    .content_title{
+      font-weight: 800;
+      font-size: 2em;
+      margin: 1.25em 0 1em 0;
+    }
+
+    .content_article{
+      margin-bottom: 2em;
+      font-weight: 300;
+      u{
+        color: $button-border-color;
+      }
+    }
+
+    .continue{
+      margin-bottom: 2em;
+      padding: 0.85em 0;
+      width: 100%;
+      background-color: $button-border-color;
+      font-size: 1.25em;
+      color: white;
+      font-weight: 800;
     }
   }
 }

@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,11 +14,17 @@
 </head>
 <body>
     <div class="container">
-        <header>
+        <header class="header">
             <div class="logo">
                 <h2>Verti</h2>
             </div>
             <nav>
+                <input type="checkbox" id="hamburger">
+                <label for="hamburger" class="hamburger__toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
                 <ul class="menu">
                     <li class="menu_item menu_item_active">Welcome</li>
                     <li class="menu_item">Dropdown</li>
@@ -46,9 +51,33 @@
             </div>
         </div>
         <section class="portfolio">
-            <article class="portfolio__item">
+            <article class="portfolio__item first">
                 <div class="portfolio__item__thumbnail">
-                    <img scr=verti-example/assets/pic01.jpg">
+                    <img src="../assets/pic01.jpg" alt="">
+                </div>
+                <header class="portfolio__item__header">
+                    <h3>An interesting title</h3>
+                    <h4>This is also an interesting subtitle</h4>
+                </header>
+                <p class="portfolio__item__description">
+                    Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.
+                </p>
+            </article>
+            <article class="portfolio__item second">
+                <div class="portfolio__item__thumbnail">
+                    <img src="../assets/pic01.jpg" alt="">
+                </div>
+                <header class="portfolio__item__header">
+                    <h3>An interesting title</h3>
+                    <h4>This is also an interesting subtitle</h4>
+                </header>
+                <p class="portfolio__item__description">
+                    Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.
+                </p>
+            </article>
+            <article class="portfolio__item third">
+                <div class="portfolio__item__thumbnail">
+                    <img src="../assets/pic03.jpg" alt="">
                 </div>
                 <header class="portfolio__item__header">
                     <h3>An interesting title</h3>
@@ -59,9 +88,70 @@
                 </p>
             </article>
         </section>
+        <section class="content">
+            <div class="content_text">
+                <h2 class="content_title">So what's this all about?</h2>
+                <p class="content_article">This is <b>Verti</b>, a free and fully responsive <u>HTML5</u> site template by HTML5 UP. Verti is released under the <u>Creative Commons Attribution license</u>, so feel free to use it for any personal or commercial project you might have going on (just don't forget to credit us for the design!)</p>
+                <p class="content_article">Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus. Praesent semper bibendum ipsum, et tristique augue fringilla eu. Vivamus id risus vel dolor auctor euismod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat. Aliquam luctus mattis lectus sit amet phasellus quam turpis.</p>
+                <button class="continue">
+                    <i class="fas fa-arrow-circle-right"></i>
+                    <span>Continue Reading</span>
+                </button>
+            </div>
+            <div class="galery">
+                <h3>Interesting stuff</h3>
+        <!--        grid 2x2-->
+            </div>
+            <button class="more">
+                <i class="info"></i>
+                <span>More</span>
+            </button>
+        </section>
+    <footer>
+        <div class="footer_list">
+            <h3>Random Stuff</h3>
+            <ul>
+                <li>Etiam feugiat condimentum</li>
+                <li>Aliquam imperdiet suscipit odio</li>
+                <li>Sed porttitor cras in erat nec</li>
+                <li>Felis varius pellentesque potenti</li>
+                <li>Nullam scelerisque blandit leo</li>
+            </ul>
+        </div>
+        <div class="footer_list">
+            <h3>Random Stuff</h3>
+            <ul>
+                <li>Etiam feugiat condimentum</li>
+                <li>Aliquam imperdiet suscipit odio</li>
+                <li>Sed porttitor cras in erat nec</li>
+                <li>Felis varius pellentesque potenti</li>
+                <li>Nullam scelerisque blandit leo</li>
+            </ul>
+        </div>
+        <div class="footer_list">
+            <h3>Random Stuff</h3>
+            <ul>
+                <li>Etiam feugiat condimentum</li>
+                <li>Aliquam imperdiet suscipit odio</li>
+                <li>Sed porttitor cras in erat nec</li>
+                <li>Felis varius pellentesque potenti</li>
+                <li>Nullam scelerisque blandit leo</li>
+            </ul>
+        </div>
+        <div class="contact">
+            <div class="social-media">
+                <div class="twitter"></div>
+                <div class="fb"></div>
+                <div class="insta"></div>
+                <div class="ball"></div>
+                <div class="pintrest"></div>
+            </div>
+            <p>1234 Fictional Road</p>
+            <p>Nashville, TN 00000</p>
+            <p>(800) 555-0000</p>
+        </div>
+    </footer>
     </div>
-
-
 
 </body>
 </html>

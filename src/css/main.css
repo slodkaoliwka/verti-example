@@ -1,4 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: none;
+  border-radius: 0.25em;
+}
+
 body {
-  background-color: cornflowerblue;
+  background-color: #E4E4E4;
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.logo {
+  padding: 0 0.25em;
+  border-radius: 0.25em;
+  letter-spacing: 2px;
+  font-size: 2em;
+  font-family: "Oleo Script", sans-serif;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (min-width: 768px) {
+  header {
+    justify-content: space-between;
+  }
+}
+header .logo {
+  display: inline-block;
+  background-color: #FC4887;
+}
+header #hamburger {
+  display: none;
+}
+header #hamburger:checked ~ .menu {
+  display: flex;
+}
+header .hamburger__toggle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1em;
+}
+header .hamburger__toggle span {
+  width: 20px;
+  height: 2px;
+  display: block;
+  margin-bottom: 3px;
+  background-color: #FC4887;
+  transition: 0.3s all ease-in-out;
+}
+@media only screen and (min-width: 768px) {
+  header .hamburger__toggle span {
+    display: none;
+  }
+}
+header .hamburger__toggle .menu {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  header .hamburger__toggle .menu {
+    display: flex;
+  }
+}
+header .hamburger__toggle .menu .menu_item {
+  padding: 0.5em 1em;
+  font-weight: bold;
+  border-radius: 0.25em;
+}
+header .hamburger__toggle .menu .menu_item_active {
+  background-color: #444444;
+  color: #E4E4E4;
+}
+
+.welcome {
+  background-color: white;
+  padding: 1em;
+  margin-top: 1em;
+  border-radius: 0.25em;
+}
+@media only screen and (min-width: 768px) {
+  .welcome {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+  }
+}
+.welcome .welcome_text {
+  text-align: center;
+  padding: 1em 2em;
+}
+@media only screen and (min-width: 768px) {
+  .welcome .welcome_text {
+    text-align: left;
+    max-width: 430px;
+  }
+}
+.welcome .welcome_text .title {
+  font-weight: 800;
+}
+.welcome .welcome_text .subtitle {
+  font-weight: 300;
+  color: #444442;
+}
+.welcome .welcome_buttons {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em 0;
+}
+@media only screen and (min-width: 768px) {
+  .welcome .welcome_buttons {
+    width: 255px;
+  }
+}
+.welcome .welcome_buttons .button {
+  margin: 0.25em 0;
+  padding: 0.5em 0;
+  font-weight: 800;
+}
+@media only screen and (min-width: 768px) {
+  .welcome .welcome_buttons .button {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1em;
+    font-size: 1.5em;
+    padding: 0.5em 1em;
+  }
+}
+.welcome .welcome_buttons .button-primary {
+  background-color: #1691C3;
+  color: white;
+}
+.welcome .welcome_buttons .button-secondary {
+  background-color: #E4E4E4;
+  color: #444444;
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+  .portfolio {
+    flex-direction: row;
+  }
+}
+.portfolio .portfolio__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 0.5em;
+  margin: 1em 1em;
+}
+.portfolio .portfolio__item .portfolio__item__thumbnail img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.portfolio .portfolio__item .portfolio__item__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1em;
+}
+.portfolio .portfolio__item .portfolio__item__header h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+}
+.portfolio .portfolio__item .portfolio__item__header h4 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+.portfolio .portfolio__item .portfolio__item__description {
+  text-align: left;
+  padding: 1em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+.portfolio .third {
+  margin: 1em 1em 5em 1em;
+}
+
+.content {
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+}
+.content .content_text {
+  padding: 1em;
+}
+.content .content_text .content_title {
+  font-weight: 800;
+  font-size: 2em;
+  margin: 1.25em 0 1em 0;
+}
+.content .content_text .content_article {
+  margin-bottom: 2em;
+  font-weight: 300;
+}
+.content .content_text .content_article u {
+  color: #1691C3;
+}
+.content .content_text .continue {
+  margin-bottom: 2em;
+  padding: 0.85em 0;
+  width: 100%;
+  background-color: #1691C3;
+  font-size: 1.25em;
+  color: white;
+  font-weight: 800;
 }
 /*# sourceMappingURL=main.css.map */
